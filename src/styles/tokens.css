@@ -1,0 +1,180 @@
+@theme {
+  /* ── Base Colors ── */
+  --color-metro-white: #FFFFFF;
+  --color-metro-black: #000000;
+
+  /* ── Slate ── */
+  --color-metro-slate-50: #F8FAFC;
+  --color-metro-slate-100: #F1F5F9;
+  --color-metro-slate-200: #E2E8F0;
+  --color-metro-slate-300: #CBD5E1;
+  --color-metro-slate-400: #94A3B8;
+  --color-metro-slate-500: #64748B;
+  --color-metro-slate-600: #475569;
+  --color-metro-slate-700: #334155;
+  --color-metro-slate-800: #1E293B;
+  --color-metro-slate-900: #0F172A;
+  --color-metro-slate-950: #020617;
+
+  /* ── Blue ── */
+  --color-metro-blue-50: #F7FBFF;
+  --color-metro-blue-100: #F0F7FF;
+  --color-metro-blue-200: #EAF3FF;
+  --color-metro-blue-300: #D6E6FA;
+  --color-metro-blue-400: #C2D6F0;
+  --color-metro-blue-500: #9FBFE3;
+  --color-metro-blue-600: #6FA0D6;
+  --color-metro-blue-700: #3D78C3;
+  --color-metro-blue-800: #1F5FB6;
+  --color-metro-blue-900: #0F4FAF;
+  --color-metro-blue-950: #0046AD;
+
+  /* ── Navy ── */
+  --color-metro-navy-50: #0046AD;
+  --color-metro-navy-100: #00409C;
+  --color-metro-navy-200: #00398C;
+  --color-metro-navy-300: #00327C;
+  --color-metro-navy-400: #002B6D;
+  --color-metro-navy-500: #00245E;
+  --color-metro-navy-600: #001D4F;
+  --color-metro-navy-700: #000D45;
+  --color-metro-navy-800: #000A36;
+  --color-metro-navy-900: #000724;
+  --color-metro-navy-950: #000512;
+
+  /* ── Red ── */
+  --color-metro-red-50: #FEF2F2;
+  --color-metro-red-100: #FFE2E2;
+  --color-metro-red-200: #FECACA;
+  --color-metro-red-300: #FCA5A5;
+  --color-metro-red-400: #F87171;
+  --color-metro-red-500: #EF4444;
+  --color-metro-red-600: #DC2626;
+  --color-metro-red-700: #B91C1C;
+  --color-metro-red-800: #991B1B;
+  --color-metro-red-900: #7F1D1D;
+  --color-metro-red-950: #450A0A;
+  --color-metro-red-brand: #DE1927;
+  --color-metro-red-brand-deep: #A30031;
+
+  /* ── Amber ── */
+  --color-metro-amber-50: #FFFDF5;
+  --color-metro-amber-100: #FEF3C7;
+  --color-metro-amber-200: #FDE68A;
+  --color-metro-amber-300: #FCD34D;
+  --color-metro-amber-400: #FBBF24;
+  --color-metro-amber-500: #F59E0B;
+  --color-metro-amber-600: #D97706;
+  --color-metro-amber-700: #B45309;
+  --color-metro-amber-800: #92400E;
+  --color-metro-amber-900: #78350F;
+  --color-metro-amber-950: #451A03;
+
+  /* ── Green ── */
+  --color-metro-green-50: #F0FDF4;
+  --color-metro-green-100: #DCFCE7;
+  --color-metro-green-200: #BBF7D0;
+  --color-metro-green-300: #86EFAC;
+  --color-metro-green-400: #4ADE80;
+  --color-metro-green-500: #22C55E;
+  --color-metro-green-600: #16A34A;
+  --color-metro-green-700: #15803D;
+  --color-metro-green-800: #166534;
+  --color-metro-green-900: #14532D;
+  --color-metro-green-950: #052E16;
+
+  /* ── Violet ── */
+  --color-metro-violet-50: #F5F3FF;
+  --color-metro-violet-100: #EDE9FE;
+  --color-metro-violet-200: #DDD6FE;
+  --color-metro-violet-300: #C4B5FD;
+  --color-metro-violet-400: #A78BFA;
+  --color-metro-violet-500: #8B5CF6;
+  --color-metro-violet-600: #7C3AED;
+  --color-metro-violet-700: #6D28D9;
+  --color-metro-violet-800: #5B21B6;
+  --color-metro-violet-900: #4C1D95;
+  --color-metro-violet-950: #2E1065;
+
+  /* ── Fuchsia ── */
+  --color-metro-fuchsia-50: #FDF4FF;
+  --color-metro-fuchsia-100: #FAE8FF;
+  --color-metro-fuchsia-200: #F5D0FE;
+  --color-metro-fuchsia-300: #F0ABFC;
+  --color-metro-fuchsia-400: #E879F9;
+  --color-metro-fuchsia-500: #D946EF;
+  --color-metro-fuchsia-600: #C026D3;
+  --color-metro-fuchsia-700: #A21CAF;
+  --color-metro-fuchsia-800: #86198F;
+  --color-metro-fuchsia-900: #701A75;
+  --color-metro-fuchsia-950: #4A044E;
+
+  /* ── Semantic: Brand ── */
+  --color-metro-primary: #0046AD;
+  --color-metro-primary-hover: #00398C;
+  --color-metro-primary-active: #00327C;
+  --color-metro-primary-soft: #EAF3FF;
+  --color-metro-primary-foreground: #F7FBFF;
+  --color-metro-accent: #DE1927;
+
+  /* ── Semantic: Neutral ── */
+  --color-metro-foreground: #0F172A;
+  --color-metro-foreground-inverse: #F8FAFC;
+  --color-metro-foreground-muted: #64748B;
+  --color-metro-surface: #FFFFFF;
+  --color-metro-surface-element: #F1F5F9;
+  --color-metro-surface-secondary: #EAF3FF;
+  --color-metro-surface-muted: #E2E8F0;
+  --color-metro-surface-muted-inverse: #1E293B;
+  --color-metro-border: #E2E8F0;
+  --color-metro-border-inverse: #475569;
+
+  /* ── Semantic: Sentiments ── */
+  --color-metro-info: #1F5FB6;
+  --color-metro-info-soft: #C2D6F0;
+  --color-metro-success: #16A34A;
+  --color-metro-success-soft: #BBF7D0;
+  --color-metro-warning: #F59E0B;
+  --color-metro-warning-soft: #FDE68A;
+  --color-metro-error: #DC2626;
+  --color-metro-error-soft: #FECACA;
+
+  /* ── Semantic: Data Visualization ── */
+  --color-metro-data-1: #0046AD;
+  --color-metro-data-2: #000D45;
+  --color-metro-data-3: #F59E0B;
+  --color-metro-data-4: #22C55E;
+  --color-metro-data-5: #8B5CF6;
+
+  /* ── Typography ── */
+  --font-metro-display: "FT Polar", system-ui, sans-serif;
+  --font-metro-body: "Inter", system-ui, sans-serif;
+
+  --text-metro-xs: 0.75rem;
+  --text-metro-sm: 0.875rem;
+  --text-metro-base: 1rem;
+  --text-metro-lg: 1.125rem;
+  --text-metro-xl: 1.25rem;
+  --text-metro-2xl: 1.5rem;
+  --text-metro-3xl: 2.5rem;
+
+  /* ── Spacing ── */
+  --spacing-metro-xs: 0.25rem;
+  --spacing-metro-sm: 0.5rem;
+  --spacing-metro-md: 1rem;
+  --spacing-metro-lg: 1.5rem;
+  --spacing-metro-xl: 2rem;
+  --spacing-metro-2xl: 3rem;
+  --spacing-metro-3xl: 4rem;
+
+  /* ── Border Radius ── */
+  --radius-metro-none: 0;
+  --radius-metro-input: 8px;
+  --radius-metro-card: 16px;
+  --radius-metro-button: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-metro-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-metro-md: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --shadow-metro-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
+}

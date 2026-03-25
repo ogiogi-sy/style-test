@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+@font-face {
+  font-family: "FT Polar";
+  src:
+    url("./fonts/FT Polar/woff2/FTPolar-Light.woff2") format("woff2"),
+    url("./fonts/FT Polar/otf/FTPolar-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FT Polar";
+  src:
+    url("./fonts/FT Polar/woff2/FTPolar-Regular.woff2") format("woff2"),
+    url("./fonts/FT Polar/otf/FTPolar-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FT Polar";
+  src: url("./fonts/FT Polar/woff2/FTPolar-Semibold.woff2") format("woff2"),
+       url("./fonts/FT Polar/otf/FTPolar-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FT Polar";
+  src: url("./fonts/FT Polar/woff2/FTPolar-Bold.woff2") format("woff2"),
+       url("./fonts/FT Polar/otf/FTPolar-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-metro-body);
+  color: var(--color-metro-foreground);
+  background-color: var(--color-metro-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  isolation: isolate;
+  min-height: 100svh;
+}
