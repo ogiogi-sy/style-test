@@ -30,12 +30,39 @@ export function PaymentConfirmedScreen() {
       <div className="flex-1 px-metro-lg pb-metro-lg overflow-y-auto">
         {/* Success icon — outer ring + inner circle + check */}
         <div className="flex justify-center mt-metro-xl mb-metro-md">
-          <div className="w-24 h-24 rounded-full border border-emerald-200 flex items-center justify-center">
-            <div className="w-[72px] h-[72px] rounded-full bg-emerald-50 flex items-center justify-center">
-              <CheckIcon className="w-8 h-8 text-emerald-500" />
+          <div className="success-ring w-24 h-24 rounded-full border border-emerald-200 flex items-center justify-center">
+            <div className="success-circle w-[72px] h-[72px] rounded-full bg-emerald-50 flex items-center justify-center">
+              <CheckIcon className="success-check w-8 h-8 text-emerald-500" />
             </div>
           </div>
         </div>
+
+        <style>{`
+          .success-ring {
+            animation: ringPop 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+          }
+          .success-circle {
+            animation: circlePop 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+          }
+          .success-check {
+            animation: checkDraw 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+          }
+          @keyframes ringPop {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.15); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+          }
+          @keyframes circlePop {
+            0% { transform: scale(0); opacity: 0; }
+            60% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+          }
+          @keyframes checkDraw {
+            0% { transform: scale(0) rotate(-45deg); opacity: 0; }
+            60% { transform: scale(1.2) rotate(0deg); opacity: 1; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+          }
+        `}</style>
 
         {/* Title + subtitle */}
         <h2 className="text-metro-2xl font-metro-display font-light text-metro-foreground text-center mb-metro-xs">

@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import { Progress } from '@base-ui/react/progress'
 import { StatusBar } from './StatusBar'
 import { BackArrowIcon } from './Icons'
@@ -8,24 +9,31 @@ interface ScreenHeaderProps {
   showBack?: boolean
   /** Optional label displayed next to the back button. */
   title?: string
+  /** Optional icon or element rendered on the right side of the header. */
+  rightIcon?: ReactNode
 }
 
-export function ScreenHeader({ progress, showBack = true, title }: ScreenHeaderProps) {
+export function ScreenHeader({ progress, showBack = true, title, rightIcon }: ScreenHeaderProps) {
   return (
     <div className="bg-metro-surface">
       <StatusBar variant="light" />
-      <div className="flex items-center px-metro-lg py-metro-md">
-        {showBack ? (
-          <button className="w-10 h-10 rounded-full bg-metro-surface-element flex items-center justify-center">
-            <BackArrowIcon className="w-5 h-5 text-metro-foreground" />
-          </button>
-        ) : (
-          <div className="w-10" />
-        )}
-        {title && (
-          <span className="ml-metro-sm text-metro-sm font-medium text-metro-foreground">
-            {title}
-          </span>
+      <div className="flex items-center justify-between px-metro-lg py-metro-md">
+        <div className="flex items-center">
+          {showBack ? (
+            <button className="w-10 h-10 rounded-full bg-metro-surface-element flex items-center justify-center">
+              <BackArrowIcon className="w-5 h-5 text-metro-foreground" />
+            </button>
+          ) : (
+            <div className="w-10" />
+          )}
+          {title && (
+            <span className="ml-metro-sm text-metro-sm font-medium text-metro-foreground">
+              {title}
+            </span>
+          )}
+        </div>
+        {rightIcon && (
+          <div className="flex items-center">{rightIcon}</div>
         )}
       </div>
       {progress != null && (

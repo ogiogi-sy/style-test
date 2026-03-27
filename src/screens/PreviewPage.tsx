@@ -12,6 +12,9 @@ import { PaymentConfirmedScreen } from './PaymentConfirmedScreen'
 import { PayeeDetailsScreen } from './PayeeDetailsScreen'
 import { PaymentFormScreen } from './PaymentFormScreen'
 import { ConfirmIdentityScreen } from './ConfirmIdentityScreen'
+import { ConnectBankScreen } from './ConnectBankScreen'
+import { ActivateAccountScreen } from './ActivateAccountScreen'
+import { ReviewConfirmScreen } from './ReviewConfirmScreen'
 
 export function PreviewPage() {
   return (
@@ -21,7 +24,7 @@ export function PreviewPage() {
           Mobile Banking Screens
         </h1>
         <p className="text-metro-lg text-metro-foreground-muted">
-          13 fintech screens built with Metro design tokens and Base UI components
+          16 fintech screens built with Metro design tokens and Base UI components
         </p>
       </header>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-metro-xl justify-items-center">
@@ -63,6 +66,15 @@ export function PreviewPage() {
         </PhoneFrame>
         <PhoneFrame label="Payment Confirmed">
           <PaymentConfirmedScreen />
+        </PhoneFrame>
+        <PhoneFrame label="Connect Your Bank">
+          <ConnectBankScreen />
+        </PhoneFrame>
+        <PhoneFrame label="Activate Account">
+          <ActivateAccountScreen />
+        </PhoneFrame>
+        <PhoneFrame label="Review & Confirm">
+          <ReviewConfirmScreen />
         </PhoneFrame>
       </div>
     </div>

@@ -50,7 +50,7 @@ export function PaymentFormScreen() {
             Amount
           </Field.Label>
           <div className="bg-metro-surface-element rounded-metro-card p-metro-lg mb-metro-lg">
-            <p className="text-[28px] font-metro-display font-semibold text-metro-foreground">
+            <p className="text-[32px] font-metro-display font-semibold text-metro-foreground">
               £ 250<span className="text-metro-foreground-muted">.00</span>
             </p>
           </div>

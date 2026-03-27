@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Button } from '@base-ui/react/button'
 import { Separator } from '@base-ui/react/separator'
 import { ScreenHeader } from './shared/ScreenHeader'
@@ -43,7 +44,30 @@ const quickActions = [
   },
 ]
 
+function useCountUp(target: number, duration = 1200, delay = 300) {
+  const [value, setValue] = useState(0)
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      const start = performance.now()
+      function tick(now: number) {
+        const elapsed = now - start
+        const progress = Math.min(elapsed / duration, 1)
+        const eased = 1 - Math.pow(1 - progress, 3)
+        setValue(Math.round(target * eased))
+        if (progress < 1) requestAnimationFrame(tick)
+      }
+      requestAnimationFrame(tick)
+    }, delay)
+    return () => clearTimeout(timeout)
+  }, [target, duration, delay])
+  return value
+}
+
 export function YourAccountScreen() {
+  const balance = useCountUp(1500, 1200, 300)
+  const spending = useCountUp(3029, 1200, 500)
+  const percent = useCountUp(61, 800, 500)
+
   return (
     <div className="relative flex flex-col h-full bg-metro-surface">
       <ScreenHeader showBack={false} />
@@ -62,7 +86,7 @@ export function YourAccountScreen() {
               <p className="text-metro-xs text-white uppercase tracking-wider">Available balance</p>
             </div>
             <p className="text-[32px] font-metro-display font-semibold text-white" aria-label="One thousand five hundred pounds">
-              £1,500<span className="opacity-60" aria-hidden="true">.00</span>
+              £{balance.toLocaleString()}<span className="opacity-60" aria-hidden="true">.00</span>
             </p>
             <div className="flex items-center gap-metro-sm mt-metro-md">
               <span className="text-metro-xs text-white bg-white/20 px-3 py-1 rounded-full">
@@ -101,11 +125,12 @@ export function YourAccountScreen() {
                 <div
                   className="w-full h-full rounded-full"
                   style={{
-                    background: 'conic-gradient(var(--color-metro-accent) 0% 61%, var(--color-metro-border) 61% 100%)',
+                    background: `conic-gradient(var(--color-metro-accent) 0% ${percent}%, var(--color-metro-border) ${percent}% 100%)`,
+                    transition: 'background 0.1s ease-out',
                   }}
                 />
                 <div className="absolute inset-[6px] rounded-full bg-white flex items-center justify-center">
-                  <span className="text-metro-sm font-semibold text-metro-foreground" aria-hidden="true">61%</span>
+                  <span className="text-metro-sm font-semibold text-metro-foreground" aria-hidden="true">{percent}%</span>
                 </div>
               </div>
               {/* Text column */}
@@ -113,7 +138,7 @@ export function YourAccountScreen() {
                 <p className="text-metro-xs text-metro-foreground-muted uppercase tracking-wider mb-metro-xs">
                   Monthly spending
                 </p>
-                <p className="text-metro-xl font-semibold text-metro-foreground">£3,029</p>
+                <p className="text-metro-xl font-semibold text-metro-foreground">£{spending.toLocaleString()}</p>
                 <p className="text-metro-xs text-metro-foreground-muted mt-0.5">of £5,000 budget</p>
                 <div className="flex items-center gap-metro-md mt-metro-sm">
                   <span className="flex items-center gap-1.5 text-metro-xs text-metro-foreground-muted">

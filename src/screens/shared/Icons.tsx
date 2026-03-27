@@ -227,3 +227,47 @@ export function CalendarIcon(props: IconProps) {
     </svg>
   )
 }
+
+export function LockIcon(props: IconProps) {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" {...props}>
+      <rect x="2" y="7" width="12" height="8" rx="2" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M5 7V5a3 3 0 016 0v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function WalletIcon(props: IconProps) {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" {...props}>
+      <rect x="3" y="6" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M3 10h18" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M7 15h2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function ChartIcon(props: IconProps) {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" {...props}>
+      <path d="M12 20V10M6 20v-4M18 20V4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function ArrowLeftRightIcon(props: IconProps) {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" {...props}>
+      <path d="M8 3L4 7l4 4M16 21l4-4-4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M4 7h16M20 17H4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function MetroLogoIcon(props: IconProps) {
+  return (
+    <svg width="57" height="27" viewBox="0 0 57 27" fill="none" {...props}>
+      <path d="M28.5 0L14.25 26.5H0L14.25 0H28.5ZM28.5 0L42.75 26.5H57L42.75 0H28.5Z" fill="currentColor" />
+    </svg>
+  )
+}

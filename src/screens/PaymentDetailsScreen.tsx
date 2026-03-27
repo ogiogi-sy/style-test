@@ -60,7 +60,7 @@ export function PaymentDetailsScreen() {
           <div className="p-metro-md">
             <p className="text-metro-xs text-metro-foreground-muted mb-metro-sm">To</p>
             <div className="flex items-center gap-metro-md">
-              <div className="w-10 h-10 rounded-full bg-violet-100 text-violet-600 flex items-center justify-center text-metro-sm font-semibold shrink-0">
+              <div className="w-10 h-10 rounded-full bg-metro-primary/10 text-metro-primary flex items-center justify-center text-metro-sm font-semibold shrink-0">
                 AS
               </div>
               <div className="flex-1 min-w-0">
