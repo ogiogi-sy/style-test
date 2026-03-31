@@ -4,7 +4,6 @@ import {
   ShieldCheckIcon,
   CheckCircleIcon,
   LockIcon,
-  ArrowRightIcon,
   ChevronDownIcon,
   BriefcaseIcon,
   CheckIcon,
