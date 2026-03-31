@@ -19,13 +19,21 @@ import { ReviewConfirmScreen } from './ReviewConfirmScreen'
 export function PreviewPage() {
   return (
     <div className="min-h-screen bg-metro-slate-100 p-metro-2xl font-metro-body">
-      <header className="mb-metro-2xl">
-        <h1 className="text-metro-3xl font-metro-display font-light text-metro-foreground">
-          Mobile Banking Screens
-        </h1>
-        <p className="text-metro-lg text-metro-foreground-muted">
-          16 fintech screens built with Metro design tokens and Base UI components
-        </p>
+      <header className="mb-metro-2xl flex items-end justify-between">
+        <div>
+          <h1 className="text-metro-3xl font-metro-display font-light text-metro-foreground">
+            Mobile Banking Screens
+          </h1>
+          <p className="text-metro-lg text-metro-foreground-muted">
+            16 fintech screens built with Metro design tokens and Base UI components
+          </p>
+        </div>
+        <a
+          href="#/web"
+          className="text-metro-sm font-medium text-metro-primary hover:text-metro-primary-hover transition-colors"
+        >
+          View Web Screens &rarr;
+        </a>
       </header>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-metro-xl justify-items-center">
         <PhoneFrame label="Welcome">
