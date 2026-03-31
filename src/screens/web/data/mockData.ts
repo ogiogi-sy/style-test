@@ -16,7 +16,6 @@ export const portfolioStats = [
   { icon: 'piggyBank', label: 'Total Deposits', value: '£204.82M', trend: '+8.4%' },
   { icon: 'users', label: 'Active Accounts', value: '140', trend: '+3' },
   { icon: 'calendar', label: 'Review', value: '45', trendLabel: 'This month' },
-  { icon: 'userX', label: 'Dormant / Inactive', value: '10', trendLabel: '90+ days' },
 ] as const
 
 export const incomeStats = [
