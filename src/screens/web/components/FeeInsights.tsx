@@ -88,7 +88,8 @@ export function FeeInsights() {
                       borderRadius: '8px',
                       fontSize: '12px',
                     }}
-                    formatter={(value) => [`\u00a3${value}`, 'Fee Income']}
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    formatter={((value: any) => [`\u00a3${value}`, 'Fee Income']) as any}
                   />
                   <Area
                     type="monotone"
