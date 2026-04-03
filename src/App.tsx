@@ -9,6 +9,7 @@ import { WebBusinessLendingScreen } from './screens/web/WebBusinessLendingScreen
 import { WebOnboardingStepperScreen } from './screens/web/WebOnboardingStepperScreen'
 import { WebPurposeScreen } from './screens/web/WebPurposeScreen'
 import { WebConnectBankV2Screen } from './screens/web/WebConnectBankV2Screen'
+import { WebFanOverviewScreen } from './screens/web/WebFanOverviewScreen'
 import { Agentation } from 'agentation'
 
 function useHashRoute() {
@@ -30,6 +31,7 @@ const webScreens: Record<string, React.ComponentType> = {
   '#/web/onboarding-stepper': WebOnboardingStepperScreen,
   '#/web/purpose': WebPurposeScreen,
   '#/web/connect-bank-v2': WebConnectBankV2Screen,
+  '#/web/fan-overview': WebFanOverviewScreen,
 }
 
 function App() {

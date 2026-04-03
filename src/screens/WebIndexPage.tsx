@@ -7,6 +7,7 @@ const webScreens = [
   { name: 'Onboarding Stepper', path: '#/web/onboarding-stepper', description: 'Onboarding progress stepper with card selection and account setup steps' },
   { name: 'Connect Your Bank (V2)', path: '#/web/connect-bank-v2', description: 'Open Banking connection screen with photo illustration' },
   { name: 'Loan Purpose', path: '#/web/purpose', description: 'Business lending wizard — select loan purpose and connect Open Banking' },
+  { name: 'Fan Overview', path: '#/web/fan-overview', description: 'Customer detail page with KPIs, fee insights, growth opportunities, and account operations' },
 ]
 
 export function WebIndexPage() {

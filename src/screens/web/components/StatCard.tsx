@@ -30,7 +30,7 @@ export function StatCard({ icon, label, value, trend, trendLabel, subtitle, vari
         </div>
       </div>
       <div className="flex items-center gap-metro-xs">
-        <span className="text-metro-2xl font-metro-display font-normal text-metro-foreground tabular-nums">{value}</span>
+        <span className="text-metro-lg 2xl:text-metro-2xl font-metro-display font-light text-metro-foreground tabular-nums">{value}</span>
         {trend && (
           <span className="inline-flex items-center gap-1 text-metro-success text-metro-xs">
             <TrendUpIcon className="w-3.5 h-3.5" />

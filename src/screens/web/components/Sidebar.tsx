@@ -17,6 +17,10 @@ import {
 import metroLogoSmall from '../../../assets/logo-small.svg'
 import { sidebarNavGroups } from '../data/mockData'
 import type { ReactNode } from 'react'
+import {
+  UsersGroupIcon,
+  TelescopeIcon,
+} from '../../shared/Icons'
 
 const iconMap: Record<string, ReactNode> = {
   home: <HomeIcon className="w-4 h-4" />,
@@ -28,14 +32,32 @@ const iconMap: Record<string, ReactNode> = {
   ellipsis: <EllipsisIcon className="w-4 h-4" />,
   chart: <ChartIcon className="w-4 h-4" />,
   box: <BoxIcon className="w-4 h-4" />,
+  usersGroup: <UsersGroupIcon className="w-4 h-4" />,
+  telescope: <TelescopeIcon className="w-4 h-4" />,
+}
+
+interface NavItem {
+  icon: string
+  label: string
+  active?: boolean
+  expandable?: boolean
+  subItems?: readonly string[]
+  badge?: string
+}
+
+interface NavGroup {
+  label: string
+  items: readonly NavItem[]
 }
 
 interface SidebarProps {
   collapsed: boolean
   onToggle: () => void
+  navGroups?: readonly NavGroup[]
 }
 
-export function Sidebar({ collapsed, onToggle }: SidebarProps) {
+export function Sidebar({ collapsed, onToggle, navGroups }: SidebarProps) {
+  const groups = navGroups ?? sidebarNavGroups
   return (
     <aside className={`hidden md:flex flex-col h-full p-metro-sm shrink-0 transition-all duration-300 ${collapsed ? 'w-[72px]' : 'w-[237px]'}`}>
       <div className="bg-metro-slate-50 rounded-metro-card flex flex-col h-full overflow-hidden">
@@ -69,7 +91,7 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
 
         {/* Nav groups */}
         <div className="flex-1 px-metro-sm overflow-y-auto">
-          {sidebarNavGroups.map((group, gi) => (
+          {groups.map((group, gi) => (
             <div key={group.label} className={`p-metro-sm ${gi > 0 ? '' : ''}`}>
               {!collapsed && (
                 <div className="px-metro-sm h-8 flex items-center">
