@@ -6,14 +6,17 @@ import { IncomeGeneration } from './components/IncomeGeneration'
 import { CustomersTable } from './components/CustomersTable'
 
 export function WebDashboardScreen() {
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
     <div className="flex h-full bg-metro-surface font-metro-body">
-      <Sidebar collapsed={sidebarCollapsed} onToggle={() => setSidebarCollapsed(prev => !prev)} />
+      <Sidebar
+        mobileOpen={mobileOpen}
+        onMobileClose={() => setMobileOpen(false)}
+      />
       <div className="flex-1 flex flex-col overflow-hidden">
         <main className="flex-1 overflow-y-auto px-metro-lg pb-metro-lg">
-          <Navbar />
+          <Navbar onMenuToggle={() => setMobileOpen(true)} />
           <div className="flex flex-col gap-metro-xl">
             <PortfolioOverview />
             <IncomeGeneration />

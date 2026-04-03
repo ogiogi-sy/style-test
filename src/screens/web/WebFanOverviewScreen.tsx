@@ -27,7 +27,7 @@ const kpiIconMap: Record<string, ReactNode> = {
 }
 
 export function WebFanOverviewScreen() {
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
   const [dismissedAlerts, setDismissedAlerts] = useState<Set<number>>(new Set())
 
   const handleDismiss = (index: number) => {
@@ -36,16 +36,18 @@ export function WebFanOverviewScreen() {
 
   return (
     <div className="flex h-full bg-metro-surface font-metro-body">
-      <Sidebar collapsed={sidebarCollapsed} onToggle={() => setSidebarCollapsed((prev) => !prev)} navGroups={fanSidebarNavGroups} />
+      <Sidebar
+        navGroups={fanSidebarNavGroups}
+        mobileOpen={mobileOpen}
+        onMobileClose={() => setMobileOpen(false)}
+      />
       <div className="flex-1 flex flex-col overflow-hidden">
         <main className="flex-1 overflow-y-auto px-metro-lg pb-metro-lg">
-          <Navbar />
+          <Navbar onMenuToggle={() => setMobileOpen(true)} />
 
           <div className="flex flex-col gap-metro-lg">
-            {/* Customer Header + Tabs */}
             <CustomerHeader customer={customerInfo} />
 
-            {/* Alert Banners */}
             {alertBanners.map((alert, i) =>
               !dismissedAlerts.has(i) ? (
                 <AlertBanner
@@ -59,7 +61,6 @@ export function WebFanOverviewScreen() {
               ) : null
             )}
 
-            {/* KPI Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-5 gap-metro-md">
               {kpiCards.map((card) => (
                 <StatCard
@@ -73,19 +74,14 @@ export function WebFanOverviewScreen() {
               ))}
             </div>
 
-            {/* Two-panel layout: Main content + Fan Details sidebar */}
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_360px] gap-metro-lg">
-              {/* Left: Main content */}
               <div className="flex flex-col gap-metro-xl">
                 <FeeInsights />
                 <GrowthOpportunities />
               </div>
-
-              {/* Right: Fan Details Panel */}
               <FanDetailsPanel />
             </div>
 
-            {/* Account Operations (full width) */}
             <AccountOpsTable />
           </div>
         </main>

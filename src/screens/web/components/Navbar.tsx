@@ -1,9 +1,23 @@
 import { Button } from '@base-ui/react/button'
-import { SearchIcon, BellIcon } from '../../shared/Icons'
+import { SearchIcon, BellIcon, MenuIcon } from '../../shared/Icons'
 
-export function Navbar() {
+interface NavbarProps {
+  onMenuToggle?: () => void
+}
+
+export function Navbar({ onMenuToggle }: NavbarProps) {
   return (
-    <div className="flex items-center justify-end py-metro-sm pr-metro-lg">
+    <div className="flex items-center justify-between py-metro-sm pr-metro-lg">
+      {/* Hamburger — visible only below md */}
+      {onMenuToggle && (
+        <button
+          onClick={onMenuToggle}
+          className="md:hidden w-8 h-8 rounded-full bg-metro-surface-element text-metro-foreground flex items-center justify-center cursor-pointer border-none hover:bg-metro-border transition-colors"
+        >
+          <MenuIcon className="w-4 h-4" />
+        </button>
+      )}
+      <div className="flex-1" />
       <div className="flex items-center gap-1.5">
         <Button className="w-8 h-8 rounded-full bg-metro-surface-element text-metro-foreground flex items-center justify-center cursor-pointer border-none hover:bg-metro-border transition-colors">
           <SearchIcon className="w-4 h-4" />

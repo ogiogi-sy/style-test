@@ -533,6 +533,14 @@ export function XIcon(props: IconProps) {
   )
 }
 
+export function MenuIcon(props: IconProps) {
+  return (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" {...props}>
+      <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
 export function MetroLogoIcon(props: IconProps) {
   return (
     <svg width="57" height="27" viewBox="0 0 57 27" fill="none" {...props}>
