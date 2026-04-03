@@ -88,7 +88,7 @@ export function FeeInsights() {
                       borderRadius: '8px',
                       fontSize: '12px',
                     }}
-                    formatter={(value: number) => [`\u00a3${value}`, 'Fee Income']}
+                    formatter={(value) => [`\u00a3${value}`, 'Fee Income']}
                   />
                   <Area
                     type="monotone"
