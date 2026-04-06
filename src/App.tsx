@@ -10,6 +10,8 @@ import { WebOnboardingStepperScreen } from './screens/web/WebOnboardingStepperSc
 import { WebPurposeScreen } from './screens/web/WebPurposeScreen'
 import { WebConnectBankV2Screen } from './screens/web/WebConnectBankV2Screen'
 import { WebFanOverviewScreen } from './screens/web/WebFanOverviewScreen'
+import { WebFanOverviewCmdKScreen } from './screens/web/WebFanOverviewCmdKScreen'
+import { WebSearchResultsScreen } from './screens/web/WebSearchResultsScreen'
 import { Agentation } from 'agentation'
 
 function useHashRoute() {
@@ -32,12 +34,15 @@ const webScreens: Record<string, React.ComponentType> = {
   '#/web/purpose': WebPurposeScreen,
   '#/web/connect-bank-v2': WebConnectBankV2Screen,
   '#/web/fan-overview': WebFanOverviewScreen,
+  '#/web/fan-overview-cmdk': WebFanOverviewCmdKScreen,
+  '#/web/search': WebSearchResultsScreen,
 }
 
 function App() {
   const hash = useHashRoute()
 
-  const WebScreen = webScreens[hash]
+  const hashPath = hash.split('?')[0]
+  const WebScreen = webScreens[hashPath]
   if (WebScreen) {
     return (
       <>

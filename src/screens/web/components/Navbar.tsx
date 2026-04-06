@@ -1,5 +1,6 @@
 import { Button } from '@base-ui/react/button'
-import { SearchIcon, BellIcon, MenuIcon } from '../../shared/Icons'
+import { BellIcon, MenuIcon } from '../../shared/Icons'
+import { GlobalSearch } from './GlobalSearch'
 
 interface NavbarProps {
   onMenuToggle?: () => void
@@ -7,7 +8,7 @@ interface NavbarProps {
 
 export function Navbar({ onMenuToggle }: NavbarProps) {
   return (
-    <div className="flex items-center justify-between py-metro-sm pr-metro-lg">
+    <div className="flex items-center justify-between py-metro-sm pr-metro-lg gap-metro-md">
       {/* Hamburger — visible only below md */}
       {onMenuToggle && (
         <button
@@ -17,11 +18,17 @@ export function Navbar({ onMenuToggle }: NavbarProps) {
           <MenuIcon className="w-4 h-4" />
         </button>
       )}
+
+      {/* Global search — left side */}
+      <div className="hidden md:block flex-1 max-w-[520px]">
+        <GlobalSearch />
+      </div>
+      <div className="md:hidden">
+        <GlobalSearch />
+      </div>
+
       <div className="flex-1" />
       <div className="flex items-center gap-1.5">
-        <Button className="w-8 h-8 rounded-full bg-metro-surface-element text-metro-foreground flex items-center justify-center cursor-pointer border-none hover:bg-metro-border transition-colors">
-          <SearchIcon className="w-4 h-4" />
-        </Button>
         <div className="relative">
           <Button className="w-8 h-8 rounded-full bg-metro-surface-element text-metro-foreground flex items-center justify-center cursor-pointer border-none hover:bg-metro-border transition-colors">
             <BellIcon className="w-4 h-4" />
