@@ -8,7 +8,7 @@ interface NavbarProps {
 
 export function Navbar({ onMenuToggle }: NavbarProps) {
   return (
-    <div className="flex items-center justify-between py-metro-sm pr-metro-lg gap-metro-md">
+    <div className="flex items-center justify-between pt-metro-lg pb-metro-xl pr-metro-lg gap-metro-md">
       {/* Hamburger — visible only below md */}
       {onMenuToggle && (
         <button

@@ -223,7 +223,7 @@ export function GlobalSearch() {
       {/* Desktop: always visible | Mobile: shown when expanded */}
       <div className={`${mobileExpanded ? 'absolute left-0 top-10 z-50 w-[calc(100vw-2rem)]' : 'hidden md:block w-full'}`}>
         <div
-          className="relative flex items-center border border-metro-border rounded-full bg-metro-surface overflow-visible"
+          className="relative flex items-center rounded-full bg-metro-surface-element border border-metro-border"
           onKeyDown={handleKeyDown}
         >
           {/* Entity type dropdown trigger */}
@@ -242,7 +242,7 @@ export function GlobalSearch() {
           </button>
 
           {/* Search input */}
-          <div className="relative flex-1 min-w-0">
+          <div className="relative flex-1 min-w-0 bg-metro-surface rounded-r-full">
             <input
               ref={inputRef}
               type="text"

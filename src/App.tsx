@@ -12,6 +12,7 @@ import { WebConnectBankV2Screen } from './screens/web/WebConnectBankV2Screen'
 import { WebFanOverviewScreen } from './screens/web/WebFanOverviewScreen'
 import { WebFanOverviewCmdKScreen } from './screens/web/WebFanOverviewCmdKScreen'
 import { WebSearchResultsScreen } from './screens/web/WebSearchResultsScreen'
+import { TypographyScreen } from './screens/web/TypographyScreen'
 import { Agentation } from 'agentation'
 
 function useHashRoute() {
@@ -36,6 +37,7 @@ const webScreens: Record<string, React.ComponentType> = {
   '#/web/fan-overview': WebFanOverviewScreen,
   '#/web/fan-overview-cmdk': WebFanOverviewCmdKScreen,
   '#/web/search': WebSearchResultsScreen,
+  '#/web/typography': TypographyScreen,
 }
 
 function App() {

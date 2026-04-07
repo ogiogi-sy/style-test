@@ -150,13 +150,72 @@
   --font-metro-display: "FT Polar", system-ui, sans-serif;
   --font-metro-body: "Inter", system-ui, sans-serif;
 
-  --text-metro-xs: 0.75rem;
-  --text-metro-sm: 0.875rem;
-  --text-metro-base: 1rem;
-  --text-metro-lg: 1.125rem;
-  --text-metro-xl: 1.25rem;
-  --text-metro-2xl: 1.5rem;
-  --text-metro-3xl: 2.5rem;
+  /* Font Weights */
+  --font-weight-metro-light: 300;
+  --font-weight-metro-regular: 400;
+  --font-weight-metro-semibold: 600;
+
+  /* Letter Spacing */
+  --tracking-metro-tight: -0.03em;
+  --tracking-metro-snug: -0.015em;
+  --tracking-metro-normal: -0.01em;
+  --tracking-metro-wide: 0.01em;
+  --tracking-metro-wider: 0.015em;
+  --tracking-metro-widest: 0.02em;
+
+  /* Display — FT Polar Light, fluid 40px→64px */
+  --text-metro-display: clamp(2.5rem, 1rem + 6.4vw, 4rem);
+  --leading-metro-display: 1.1;
+  --tracking-metro-display: -0.03em;
+
+  /* Title Screen LG — FT Polar Light, fluid 32px→48px */
+  --text-metro-title-screen-lg: clamp(2rem, 1rem + 4.27vw, 3rem);
+  --leading-metro-title-screen-lg: 1.1;
+  --tracking-metro-title-screen-lg: -0.03em;
+
+  /* Title Screen — FT Polar Regular, fluid 28px→32px */
+  --text-metro-title-screen: clamp(1.75rem, 1.5rem + 1.07vw, 2rem);
+  --leading-metro-title-screen: 2.25rem;
+  --tracking-metro-title-screen: -0.03em;
+
+  /* Title Section — FT Polar, fixed 24px */
+  --text-metro-title-section: 1.5rem;
+  --leading-metro-title-section: 1.75rem;
+  --tracking-metro-title-section: -0.015em;
+
+  /* Title Subsection — FT Polar, fixed 20px */
+  --text-metro-title-subsection: 1.25rem;
+  --leading-metro-title-subsection: 1.5rem;
+  --tracking-metro-title-subsection: -0.01em;
+
+  /* Body Large — Inter, 18px */
+  --text-metro-body-lg: 1.125rem;
+  --leading-metro-body-lg: 1.5rem;
+  --tracking-metro-body-lg: 0.01em;
+
+  /* Body — Inter, 16px */
+  --text-metro-body: 1rem;
+  --leading-metro-body: 1.5rem;
+  --tracking-metro-body: 0.01em;
+
+  /* Body Small — Inter, 14px */
+  --text-metro-body-sm: 0.875rem;
+  --leading-metro-body-sm: 1.25rem;
+  --tracking-metro-body-sm: 0.015em;
+
+  /* Caption — Inter, 12px */
+  --text-metro-caption: 0.75rem;
+  --leading-metro-caption: 1rem;
+  --tracking-metro-caption: 0.02em;
+
+  /* @deprecated — use semantic tokens above */
+  --text-metro-xs: 0.75rem;    /* → text-metro-caption or text-metro-label */
+  --text-metro-sm: 0.875rem;   /* → text-metro-body-sm */
+  --text-metro-base: 1rem;     /* → text-metro-body */
+  --text-metro-lg: 1.125rem;   /* → text-metro-body-lg */
+  --text-metro-xl: 1.25rem;    /* → text-metro-title-subsection */
+  --text-metro-2xl: 1.5rem;    /* → text-metro-title-section */
+  --text-metro-3xl: 2.5rem;    /* → text-metro-display */
 
   /* ── Spacing ── */
   --spacing-metro-xs: 0.25rem;

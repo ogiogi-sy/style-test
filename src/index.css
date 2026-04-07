@@ -58,3 +58,78 @@ body {
 .animate-slide-in-left {
   animation: slide-in-left 0.2s ease-out;
 }
+
+/* ── Typography Utility Classes ── */
+@layer components {
+  /* Display — FT Polar, 40→64px fluid */
+  .typo-display {
+    font-family: var(--font-metro-display);
+    font-size: var(--text-metro-display);
+    line-height: var(--leading-metro-display);
+    letter-spacing: var(--tracking-metro-display);
+  }
+
+  /* Title Screen LG — FT Polar, 32→48px fluid */
+  .typo-title-screen-lg {
+    font-family: var(--font-metro-display);
+    font-size: var(--text-metro-title-screen-lg);
+    line-height: var(--leading-metro-title-screen-lg);
+    letter-spacing: var(--tracking-metro-title-screen-lg);
+  }
+
+  /* Title Screen — FT Polar, 28→32px fluid */
+  .typo-title-screen {
+    font-family: var(--font-metro-display);
+    font-size: var(--text-metro-title-screen);
+    line-height: var(--leading-metro-title-screen);
+    letter-spacing: var(--tracking-metro-title-screen);
+  }
+
+  /* Title Section — FT Polar, 24px */
+  .typo-title-section {
+    font-family: var(--font-metro-display);
+    font-size: var(--text-metro-title-section);
+    line-height: var(--leading-metro-title-section);
+    letter-spacing: var(--tracking-metro-title-section);
+  }
+
+  /* Title Subsection — FT Polar, 20px */
+  .typo-title-subsection {
+    font-family: var(--font-metro-display);
+    font-size: var(--text-metro-title-subsection);
+    line-height: var(--leading-metro-title-subsection);
+    letter-spacing: var(--tracking-metro-title-subsection);
+  }
+
+  /* Body Large — Inter, 18px */
+  .typo-body-lg {
+    font-family: var(--font-metro-body);
+    font-size: var(--text-metro-body-lg);
+    line-height: var(--leading-metro-body-lg);
+    letter-spacing: var(--tracking-metro-body-lg);
+  }
+
+  /* Body — Inter, 16px */
+  .typo-body {
+    font-family: var(--font-metro-body);
+    font-size: var(--text-metro-body);
+    line-height: var(--leading-metro-body);
+    letter-spacing: var(--tracking-metro-body);
+  }
+
+  /* Body Small — Inter, 14px */
+  .typo-body-sm {
+    font-family: var(--font-metro-body);
+    font-size: var(--text-metro-body-sm);
+    line-height: var(--leading-metro-body-sm);
+    letter-spacing: var(--tracking-metro-body-sm);
+  }
+
+  /* Caption — Inter, 12px */
+  .typo-caption {
+    font-family: var(--font-metro-body);
+    font-size: var(--text-metro-caption);
+    line-height: var(--leading-metro-caption);
+    letter-spacing: var(--tracking-metro-caption);
+  }
+}
